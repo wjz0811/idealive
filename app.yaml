@@ -11,3 +11,6 @@ handlers:
 
 - url: /
   script: web/index.html
+
+- url: /idea.hml
+  script: web/idea.html
