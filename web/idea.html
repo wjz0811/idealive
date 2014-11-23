@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Solar energy drink</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/offcanvas/offcanvas.css" rel="stylesheet">
+
+   <!-- include CSS & JS files -->
+   <!-- CSS file -->
+   <link rel="stylesheet" type="text/css" href="jRating.css" media="screen" />
+   <!-- jQuery files -->
+   <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+   <script type="text/javascript" src="jRating.js"></script>
+   
+   <script type="text/javascript">
+   $(document).ready(function(){
+         // simple jRating call
+         $(".basic").jRating();
+ 
+         // more complex jRating call
+         $(".basic").jRating({
+            step:true,
+            length : 5, // nb of stars
+            onSuccess : function(){
+              alert('Success : your rate has been saved :)');
+            }
+          });
+ 
+         // you can rate 3 times ! After, jRating will be disabled
+         $(".basic").jRating({
+            canRateAgain : true,
+            nbRates : 3
+          });
+ 
+         // get the clicked rate !
+         $(".basic").jRating({
+           onClick : function(element,rate) {
+            alert(rate);
+           }
+         });
+   });
+   </script>
+  </head>
+
+  <body>
+	  
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Log in</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+          </ul> 
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+
+    <div class="container">
+
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-9">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
+          <div class="jumbotron">
+            <h1>Solar energy drink </h1>
+            <p>Next level of the naturally refreshing energy boost!<br></p>
+          </div>
+
+      <hr>
+	  <center><img src="http://www.mutzarayom.co.il/storage/prod/505.jpg" width="400" height="400"></center><br>
+	  
+	    <p><font size ="4"> 
+It's organic, sustainable, natural, environmental friendly, does not include Taorin, does not include artificial sweeteners, does not include sugar
+Keeps you in shape as long as you need - depends on how long will you charge it.
+The can has solar panels on its' surface and can be rechargeable. 
+Cannot be charged overnight but can be charged over summer!</font></p><br>
+<img src="static/3-5-stars.png" width="120" height="30"><br><br>
+
+           <h3>Comments</h3><br>
+<i><font size="2">Comment by Jane McGonigal on October 22, 2014 at 10:32 </font></i><br>
+How does it work? <br> <br>
+
+<i><font size="2">Comment by David Meeks on October 23, 2014 at 14:39</font></i><br>
+Okay, but this TOTALLY could be more than a clever joke. I challenge the most creative minds on the network to figure out what a renewable energy drink could possible mean or be, if it were to actually support or drive or produce renewable energy. This is where crazy, amazing innovative ideas come from... working with really interesting constrains and strange ideas... someone HAS to try to make this idea serious and see if it produces any new, crazy, potentially useful ideas. <br> <br>
+
+<i><font size="2">Comment by Guy Gore on October 29, 2014 at 15:06</font></i><br>
+Awesome idea! <br> <br>
+
+<i><font size="2">Comment by Al Leslie on November 03, 2014 at 22:17</font></i><br>
+It's just like in that movie... How's it called? <br> <br>
+
+      <footer>
+        <p>&copy; Company 2014</p>
+      </footer>
+
+    </div><!--/.container-->
+
+
+    
+  </body>
+</html>
