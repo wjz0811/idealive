@@ -1,4 +1,4 @@
-idealive
+ideaLive
 ========
 
 Bring ideas to live
