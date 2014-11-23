@@ -1,9 +1,134 @@
-<html>
-<head>
-<title>Idealive</title>
-</head>
-<body>
-<h1>Idealive</h1>
-<h3>Bring ideas to live </h3>
-</body>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>idealive</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/offcanvas/offcanvas.css" rel="stylesheet">
+
+   <!-- include CSS & JS files -->
+   <!-- CSS file -->
+   <link rel="stylesheet" type="text/css" href="static/jRating.css" media="screen" />
+   <!-- jQuery files -->
+   <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+   <script type="text/javascript" src="static/jRating.js"></script>
+   
+   <script type="text/javascript">
+   $(document).ready(function(){
+         // simple jRating call
+         $(".basic").jRating();
+ 
+         // more complex jRating call
+         $(".basic").jRating({
+            step:true,
+            length : 20, // nb of stars
+            onSuccess : function(){
+              alert('Success : your rate has been saved :)');
+            }
+          });
+ 
+         // you can rate 3 times ! After, jRating will be disabled
+         $(".basic").jRating({
+            canRateAgain : true,
+            nbRates : 3
+          });
+ 
+         // get the clicked rate !
+         $(".basic").jRating({
+           onClick : function(element,rate) {
+            alert(rate);
+           }
+         });
+   });
+   </script>
+  </head>
+
+  <body>
+	  
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Log in</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+          </ul> 
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+
+    <div class="container">
+
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-9">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
+          <div class="jumbotron">
+            <h1>idealive</h1>
+            <p>Bring your ideas to life!</p>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 col-lg-4">
+              <h2>Idea 1</h2>
+			  <p><img src=""></p>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+			  <div class="basic" data-average="3" data-id="1"></div>
+			  
+            </div><!--/.col-xs-6.col-lg-4-->
+            <div class="col-xs-6 col-lg-4">
+              <h2>Idea 2</h2>
+			  <p><img src=""></p>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+			  <div class="basic" data-average="3" data-id="2"></div>
+			  
+            </div><!--/.col-xs-6.col-lg-4-->
+            <div class="col-xs-6 col-lg-4">
+              <h2>Idea 3</h2>
+			  <p><img src=""></p>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+			   <div class="basic" data-average="3" data-id="3"></div>
+			   
+            </div><!--/.col-xs-6.col-lg-4-->
+            <div class="col-xs-6 col-lg-4">
+              <h2>Idea 4</h2>
+			  <p><img src=""></p>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+			   <div class="basic" data-average="3" data-id="4"></div>
+			   
+        </div><!--/.col-xs-12.col-sm-9-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2014</p>
+      </footer>
+
+    </div><!--/.container-->
+
+
+    
+  </body>
 </html>
